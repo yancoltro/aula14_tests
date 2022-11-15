@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class FavoritesPage extends StatelessWidget {
-  static String routeName = '/favorites_page';
+  static String routeName = '/favoritos_page';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Favorites'),
+        title: Text('Favoritos'),
       ),
       body: Consumer<Favorites>(
         builder: (context, value, child) => ListView.builder(
@@ -48,7 +48,7 @@ class FavoriteItemTile extends StatelessWidget {
             Provider.of<Favorites>(context, listen: false).remove(itemNo);
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: Text('Removed from favorites.'),
+                content: Text('Removido dos favoritos.'),
                 duration: Duration(seconds: 1),
               ),
             );

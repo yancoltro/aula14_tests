@@ -5,10 +5,10 @@ import 'package:aula14_tests/screens/favorites.dart';
 import 'package:aula14_tests/screens/home.dart';
 
 void main() {
-  runApp(TestingApp());
+  runApp(App());
 }
 
-class TestingApp extends StatelessWidget {
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<Favorites>(

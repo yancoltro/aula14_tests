@@ -31,7 +31,7 @@ void main() {
       expect(find.byIcon(Icons.favorite), findsNothing);
       await tester.tap(find.byIcon(Icons.favorite_border).first);
       await tester.pumpAndSettle(Duration(seconds: 1));
-      expect(find.text('Adicinado aos favoritos.'), findsOneWidget);
+      expect(find.text('Adicionado aos favoritos.'), findsOneWidget);
       expect(find.byIcon(Icons.favorite), findsWidgets);
       await tester.tap(find.byIcon(Icons.favorite).first);
       await tester.pumpAndSettle(Duration(seconds: 1));

@@ -65,7 +65,7 @@ class ItemTile extends StatelessWidget {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 content: Text(favoritesList.items.contains(itemNo)
-                    ? 'Adicinado aos favoritos.'
+                    ? 'Adicionado aos favoritos.'
                     : 'Removido dos favoritos.'),
                 duration: Duration(seconds: 1),
               ),

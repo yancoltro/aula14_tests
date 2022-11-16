@@ -30,5 +30,17 @@ void main() {
       await widgetTester.pumpAndSettle();
       expect(find.byType(ListView), findsOneWidget);
     });
+
+    testWidgets('Testando o Botão de Remover', (widgetTester) async {
+      await widgetTester.pumpWidget(createMain());
+      addItems();
+      await widgetTester.pumpAndSettle();
+      var totalItems = widgetTester.widgetList(find.byIcon(Icons.close)).length;
+      await widgetTester.tap(find.byIcon(Icons.close).first);
+      await widgetTester.pumpAndSettle();
+      expect(widgetTester.widgetList(find.byIcon(Icons.close)).length,
+          lessThan(totalItems));
+      expect(find.text('Removido dos favoritos.'), findsOneWidget);
+    });
   });
 }

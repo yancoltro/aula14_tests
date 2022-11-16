@@ -12,7 +12,7 @@ Widget createMain() => ChangeNotifierProvider<Favorites>(
     );
 
 void main() {
-  group("Teste de Widgets da Home", () {
+  group("Testando Widgets da Home", () {
     testWidgets("Testando se a ListView está presente", (widgetTester) async {
       await widgetTester.pumpWidget(createMain());
       expect(find.byType(ListView), findsOneWidget);
